@@ -1,0 +1,12 @@
+{
+  "name": "typescript",
+  "version": "1.0.0",
+  "main": "index.ts",
+  "license": "MIT",
+  "dependencies": {},
+  "scripts": {
+    "dev": "ts-node index.ts",
+    "build": "tsc",
+    "prod": "npm run build && node dist"
+  }
+}
