@@ -1,3 +1,4 @@
-import type { Split } from './src';
+import type { Split, Add } from './src';
 
-type _ = Split<"hello world">;
+type split = Split<"hello world">;
+type sum = Add<1, 2>;
