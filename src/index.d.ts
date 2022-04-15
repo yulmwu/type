@@ -32,4 +32,9 @@ type Div<A extends number, B extends number> =
                 ? 0 : Add<1, Div<Sub<A, B> extends never
                     ? 0 : Sub<A, B>, B>>;
   
-declare export type { Split, Add, Sub, Mul, Div };
+type Pow<A extends number, B extends number> = 
+    B extends 1
+        ? A
+        : Mul<A, Pow<A, Sub<B, 1>>>;
+
+declare export type { Split, Add, Sub, Mul, Div, Pow };
