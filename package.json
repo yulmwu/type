@@ -1,9 +1,16 @@
 {
-  "name": "typescript",
+  "name": "typelevel",
   "version": "1.0.0",
-  "main": "index.ts",
+  "main": "src/index.d.ts",
   "license": "MIT",
-  "dependencies": {},
+  "keywords": [
+    "typelevel",
+    "type-level"
+  ],
+  "homepage": "https://github.com/tsukiroku/type",
+  "dependencies": {
+    "typelevel": "^1.0.0"
+  },
   "scripts": {
     "dev": "ts-node index.ts",
     "build": "tsc",
