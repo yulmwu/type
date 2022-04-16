@@ -1,6 +1,6 @@
 {
   "name": "typelevel",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "main": "src/index.d.ts",
   "license": "MIT",
   "keywords": [
@@ -8,9 +8,7 @@
     "type-level"
   ],
   "homepage": "https://github.com/tsukiroku/type",
-  "dependencies": {
-    "typelevel": "^1.0.0"
-  },
+  "dependencies": {},
   "scripts": {
     "dev": "ts-node index.ts",
     "build": "tsc",
