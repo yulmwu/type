@@ -1,5 +1,9 @@
 type level programming
 
+```sh
+npm install typelevel
+```
+
 ```ts
 import type {
     Split,
