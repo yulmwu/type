@@ -1,7 +1,7 @@
 type level programming
 
 ```sh
-npm install typelevel
+npm install typelevel@latest
 ```
 
 ```ts
