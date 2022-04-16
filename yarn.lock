@@ -2,3 +2,7 @@
 # yarn lockfile v1
 
 
+"typelevel@^1.0.0":
+  "integrity" "sha512-aswiiXSC2ZaUSH6TtMkBb/TPcNY0LHGHbZgaS1xCwb5SNQJu2Nowf4Tr+6166tBgT01dAdTLkBcT4AP3QqVXDw=="
+  "resolved" "https://registry.npmjs.org/typelevel/-/typelevel-1.0.0.tgz"
+  "version" "1.0.0"
