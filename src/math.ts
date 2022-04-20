@@ -50,8 +50,8 @@ type Mul<T extends number, U extends number> =
     T extends 0 
         ? 0 : U extends 0
             ? 0 : T extends 1
-                //@ts-ignore
-                ? A : Add<Mul<A, Sub<B, 1>>, A>
+                ? U : _Less<T, U> extends true
+                    ? T : Add<Mul<T, Sub<U, 1>>, T>;
 
 /**
  * @description Divide T and U
@@ -82,7 +82,7 @@ type Div<T extends number, U extends number> =
  */
 type Pow<T extends number, U extends number> = 
     U extends 1
-        //@ts-ignore
+        ? T : U extends 0
         ? T : Mul<T, Pow<T, Sub<U, 1>>>;
 
 /**
