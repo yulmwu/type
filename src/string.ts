@@ -9,11 +9,11 @@
  * type split2 = Split<"hello world", " ">; // ["hello", "world"]
  * ```
  */
-type Split<T extends string, U extends string = ""> =
-  T extends U
-    ? []
-    : T extends `${infer A}${U}${infer B}`
-      ? [A, ...Split<B, U>]
-      : [T];
+type Split<T extends string, U extends string = ""> = 
+    T extends U
+        ? []
+        : T extends `${infer A}${U}${infer B}`
+            ? [A, ...Split<B, U>]
+            : [T];
 
 export type { Split };
