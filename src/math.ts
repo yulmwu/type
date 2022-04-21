@@ -2,10 +2,11 @@ import { Repeat } from "./tool";
 
 type _Less<T extends number, U extends number> = 
     T extends 0
-        ? U extends 0
-            ? false : true
-        : U extends 0
-            ? false : _Less<Sub<T, 1>, Sub<U, 1>>;
+        ? U extends 0 ? false : true
+        : U extends 0 ? false : _Less<Sub<T, 1>, Sub<U, 1>>;
+
+type _Sqrt<T extends number, U extends number> = Div<Add<Div<T, U>, U>, 2>;
+
 
 /**
  * @description Add T and U
@@ -64,11 +65,10 @@ type Mul<T extends number, U extends number> =
  * ```
  */
 type Div<T extends number, U extends number> = 
-    T extends 0 
+    T extends 0
         ? 0 : U extends 0
             ? never : Sub<T, U> extends never
-                ? 0 : Add<1, Div<Sub<T, U> extends never
-                    ? 0 : Sub<T, U>, T>>;
+                ? 0 : Add<1, Div<Sub<T, U> extends never ? 0 : Sub<T, U>, U>>;
 
 /**
  * @description Raise T to the power of U
@@ -100,4 +100,18 @@ type Modulo<T extends number, U extends number> =
         ? T
         : Modulo<Sub<T, U>, U>;
 
-export type { Add, Sub, Mul, Div, Pow, Modulo };
+/**
+ * @description Square root T
+ * @param T number
+ * 
+ * ## Example: 
+ * ```ts
+ * type sqrt = Sqrt<81>; // 9
+ * ```
+ */
+type Sqrt<T extends number, U extends number = 0> =
+    U extends 0
+        ? Sqrt<T, Div<T, 2>> : U extends _Sqrt<T, U>
+            ? U : Sqrt<T, _Sqrt<T, U>>;
+
+export type { Add, Sub, Mul, Div, Pow, Modulo, Sqrt };
