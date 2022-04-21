@@ -30,4 +30,10 @@
         * `//@ts-ignore` 제거
     * 해당 버그로 인하여, `type Mul` 및 `type Pow` 사용이 불가능 하였습니다.
 
+## **1.0.5** - Bug Fixes, Added `Sqrt`
+* `type Div` Bug
+    * 오류 수정
+        * 오류로 인하여, `type Div` 사용이 불가능 하였습니다.
+* `type Sqrt` 추가
+
 * `CHANGELOG.md` 추가
