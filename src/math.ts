@@ -114,4 +114,4 @@ type Sqrt<T extends number, U extends number = 0> =
         ? Sqrt<T, Div<T, 2>> : U extends _Sqrt<T, U>
             ? U : Sqrt<T, _Sqrt<T, U>>;
 
-export type { Add, Sub, Mul, Div, Pow, Modulo, Sqrt };
+export type { Add, Sub, Mul, Div, Pow, Modulo, Sqrt, _Less };
