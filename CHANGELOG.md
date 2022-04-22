@@ -36,4 +36,6 @@
         * 오류로 인하여, `type Div` 사용이 불가능 하였습니다.
 * `type Sqrt` 추가
 
-* `CHANGELOG.md` 추가
+## **1.0.6** - Added `Join`, `Concat`
+* `type Join` 추가
+* `type Concat` 추가
