@@ -23,6 +23,10 @@ type modulo = Modulo<5, 3>; // 2
 type sqrt = Sqrt<81>; // 9
 
 interface Abcd { a: number, b: string, c: Array<boolean>, d: number, e: string };
-type filter = Filter<Abcd, number | Array<boolean>>; //type filter = { d: number, a: number, c: Array<boolean> }
+type filter = Filter<Abcd, number | Array<boolean>>; // { d: number, a: number, c: Array<boolean> }
 type repeat = Repeat<3, "a">; // ["a", "a", "a"]
+
+type join1 = Join<["a", "b", "c"]>; // a b c
+type join2 = Join<["a", "b", "c"], ", ">; // a, b, c
+type concat = Concat<["a", "b", "c"]>; // abc
 ```
