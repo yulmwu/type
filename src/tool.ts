@@ -31,8 +31,8 @@ type Repeat<N extends number, T = 0, V extends Array<T> = []> =
  * ```
  */
 type Filter<T, U> = Pick<
-  T,
-  { [K in keyof T]: T[K] extends U ? K : never }[keyof T]
+    T,
+    { [K in keyof T]: T[K] extends U ? K : never }[keyof T]
 >;
 
 export type { Repeat, Filter };
