@@ -7,8 +7,8 @@ npm install typelevel@latest
 # Examples
 ```ts
 import type {
-    Split,
-    Add, Sub, Mul, Div, Pow,
+    Split, Join, Concat,
+    Add, Sub, Mul, Div, Pow, Modulo, Sqrt,
     Filter, Repeat
 } from 'typelevel';
 
