@@ -32,6 +32,7 @@ type Split<T extends string, U extends string = ""> =
 type Join<T extends Array<string>, U extends string = " ", 
             R extends string = '', I extends number = 0> =
     _Less<I, Sub<T['length'], 1>> extends true
+        //@ts-ignore
         ? Join<T, U, `${R}${T[I]}${U}`, Add<I, 1>>
         : `${R}${T[Sub<T['length'], 1>]}`;
 
