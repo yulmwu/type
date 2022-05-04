@@ -8,7 +8,6 @@
     "type-level"
   ],
   "homepage": "https://github.com/tsukiroku/type",
-  "dependencies": {},
   "scripts": {
     "dev": "ts-node index.ts",
     "build": "tsc",
