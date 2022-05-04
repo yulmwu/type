@@ -26,8 +26,7 @@
 
 ## **1.0.4** - Bug Fixes
 * `type Mul` Bug 
-    * 리팩토링 도중 `//@ts-ignore` 로 인한 발견하지 못한 버그 수정
-        * `//@ts-ignore` 제거
+    * 리팩토링 도중 발견하지 못한 버그 수정
     * 해당 버그로 인하여, `type Mul` 및 `type Pow` 사용이 불가능 하였습니다.
 
 ## **1.0.5** - Bug Fixes, Added `Sqrt`
@@ -37,5 +36,9 @@
 * `type Sqrt` 추가
 
 ## **1.0.6** - Added `Join`, `Concat`
+* `type Join` 추가
+* `type Concat` 추가
+
+## **1.0.7**
 * `type Join` 추가
 * `type Concat` 추가
