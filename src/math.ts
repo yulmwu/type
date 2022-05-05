@@ -1,4 +1,4 @@
-import { Repeat } from "./tool";
+import { Repeat } from "./util";
 
 type _Less<T extends number, U extends number> = 
     T extends 0
