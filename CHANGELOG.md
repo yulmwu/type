@@ -40,5 +40,5 @@
 * `type Concat` 추가
 
 ## **1.0.7**
-* `type Join` 추가
-* `type Concat` 추가
+* `tool.ts` -> `util.ts` 이름 변경
+* 버그 수정
