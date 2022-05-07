@@ -40,7 +40,7 @@ type C<A> = { [K in keyof A]: A[K] };
 /**
  * @description Optional T
  * @param T any
- * @param U any
+ * @param U keyof T
  * 
  * ## Example: 
  * ```ts
