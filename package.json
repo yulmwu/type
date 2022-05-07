@@ -1,7 +1,7 @@
 {
   "name": "typelevel",
-  "version": "1.0.71",
-  "main": "src/index.d.ts",
+  "version": "1.0.81",
+  "main": "src/index.ts",
   "license": "MIT",
   "keywords": [
     "typelevel",
