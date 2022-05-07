@@ -35,4 +35,22 @@ type Filter<T, U> = Pick<
     { [K in keyof T]: T[K] extends U ? K : never }[keyof T]
 >;
 
-export type { Repeat, Filter };
+type C<A> = { [K in keyof A]: A[K] };
+
+/**
+ * @description Optional T
+ * @param T any
+ * @param U any
+ * 
+ * ## Example: 
+ * ```ts
+ * 
+ * type optional = Optional<{ a: string; b: number; c: boolean }, 'a' | 'c'>;
+ * // { b: number; a?: string | undefined; c?: boolean | undefined; }
+ * ```
+ */
+type Optional<T, U extends keyof T> = C<
+    Omit<T, U> & { [K in U]?: T[K] }
+>;
+
+export type { Repeat, Filter, Optional };
