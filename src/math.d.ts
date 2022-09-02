@@ -112,3 +112,21 @@ export type Sqrt<T extends number, U extends number = 0> =
     U extends 0
         ? Sqrt<T, Div<T, 2>> : U extends _Sqrt<T, U>
             ? U : Sqrt<T, _Sqrt<T, U>>
+
+/**
+ * @description Permutation of T
+ * @param T number
+ * 
+ * ## Example:
+ * ```ts
+ * type perm = Permutation<1 | 2 | 3> // [1, 2, 3] | ... | [3, 2, 1]
+ * 
+ * type lengthOfUnion = Permutation<'a' | 'b' | 'c'>['length'] // 3
+ * type lengthOfObject = Permutation<keyof { x: 1, y: 2, z: 3, foo: 'bar' }>['length'] // 4
+ */
+export type Permutation<T, U = T> = 
+    [T] extends [never]
+        ? []
+        : U extends unknown
+            ? [U, ...Permutation<Exclude<T, U>>]
+            : never

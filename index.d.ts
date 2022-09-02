@@ -11,6 +11,9 @@ type pow = T.Pow<3, 5> // 243
 type modulo = T.Modulo<5, 3> // 2
 type sqrt = T.Sqrt<81> // 9
 
+type perm = T.Permutation<1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9>
+/* [1, 2, 3, 4, 5, 6, 7, 8, 9] | [1, 2, 3, 4, 5, 6, 7, 9, 8] | ... 362877 more*/
+
 interface Abcd extends Record<'a' | 'b', string> {
     c: number
     d: Array<boolean>

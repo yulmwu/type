@@ -1,5 +1,5 @@
 import { Split, Join, Concat } from './string'
-import { Add, Sub, Mul, Div, Pow, Modulo, Sqrt } from './math'
+import { Add, Sub, Mul, Div, Pow, Modulo, Sqrt, Permutation } from './math'
 
 /**
  * @description Repeat T, N times
@@ -48,4 +48,4 @@ type _Optional<A> = { [K in keyof A]: A[K] }
  */
 export type Optional<T, U extends keyof T> = _Optional<Omit<T, U> & { [K in U]?: T[K] }>
 
-export { Add, Sub, Mul, Div, Pow, Split, Modulo, Sqrt, Join, Concat }
+export { Add, Sub, Mul, Div, Pow, Modulo, Sqrt, Permutation, Split, Join, Concat }
