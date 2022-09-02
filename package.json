@@ -1,16 +1,16 @@
 {
-  "name": "typelevel",
-  "version": "1.0.81",
-  "main": "src/index.ts",
-  "license": "MIT",
-  "keywords": [
-    "typelevel",
-    "type-level"
-  ],
-  "homepage": "https://github.com/tsukiroku/type",
-  "scripts": {
-    "dev": "ts-node index.ts",
-    "build": "tsc",
-    "prod": "npm run build && node dist"
-  }
+    "name": "typelevel",
+    "version": "1.0.81",
+    "main": "src/index.ts",
+    "license": "MIT",
+    "keywords": [
+        "typelevel",
+        "type-level"
+    ],
+    "homepage": "https://github.com/tsukiroku/type",
+    "scripts": {
+        "dev": "ts-node index.ts",
+        "build": "tsc",
+        "prod": "npm run build && node dist"
+    }
 }
