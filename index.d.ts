@@ -1,32 +1,43 @@
-import type * as T from './src/index'
+import type * as Types from './src/index'
 
-type split = T.Split<'hello world'>
-/* ['h', 'e', 'l', 'l', 'o', ' ', 'w', 'o', 'r', 'l', 'd'] */
+type split = Types.Split<'Hello, World'>
+//   ^ ["H", "e", "l", "l", "o", ",", " ", "W", "o", "r", "l", "d"]
 
-type add = T.Add<1, 2> // 3
-type sub = T.Sub<3, 2> // 1
-type mul = T.Mul<3, 2> // 6
-type div = T.Div<6, 2> // 3
-type pow = T.Pow<3, 5> // 243
-type modulo = T.Modulo<5, 3> // 2
-type sqrt = T.Sqrt<81> // 9
+type add = Types.Add<1, 2>
+//   ^ 3
+type sub = Types.Sub<3, 2>
+//   ^ 1
+type mul = Types.Mul<3, 2>
+//   ^ 6
+type div = Types.Div<6, 2>
+//   ^ 3
+type pow = Types.Pow<3, 5>
+//   ^ 243
+type modulo = Types.Modulo<5, 3>
+//   ^ 2
+type sqrt = Types.Sqrt<81>
+//   ^ 9
 
-type perm = T.Permutation<1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9>
-/* [1, 2, 3, 4, 5, 6, 7, 8, 9] | [1, 2, 3, 4, 5, 6, 7, 9, 8] | ... 362877 more*/
+type perm = Types.Permutation<1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9>
+//   ^ [1, 2, 3, 4, 5, 6, 7, 8, 9] | [1, 2, 3, 4, 5, 6, 7, 9, 8] | ... 362877 more
 
 interface Abcd extends Record<'a' | 'b', string> {
     c: number
     d: Array<boolean>
-} /* { a: string; b: string; c: number; d: boolean[]; } */
+}
 
-type filter = T.Filter<Abcd, number | Array<boolean>>
-/* filter = { c: number, d: Array<boolean> } */
+type filter = Types.Filter<Abcd, number | Array<boolean>>
+//   ^ { c: number, d: Array<boolean> }
 
-type repeat = T.Repeat<3, 'a'> // ['a', 'a', 'a']
+type repeat = Types.Repeat<3, 'a'>
+//   ^ ["a", "a", "a"]
 
-type optional = T.Optional<{ a: string; b: number; c: boolean }, 'a' | 'c'>
-/* { b: number; a?: string | undefined; c?: boolean | undefined; } */
+type optional = Types.Optional<{ a: string; b: number; c: boolean }, 'a' | 'c'>
+//   ^ { b: number; a?: string | undefined; c?: boolean | undefined; }
 
-type join1 = T.Join<['a', 'b', 'c']> // 'a b c'
-type join2 = T.Join<['a', 'b', 'c'], ', '> // 'a, b, c'
-type concat = T.Concat<['a', 'b', 'c']> // 'abc'
+type joinWhiteSpace = Types.Join<['a', 'b', 'c']>
+//   ^ "a b c"
+type join = Types.Join<['a', 'b', 'c'], ', '>
+//   ^ "a, b, c"
+type concat = Types.Concat<['a', 'b', 'c']>
+//   ^ "abc"
